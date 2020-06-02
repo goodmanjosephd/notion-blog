@@ -14,6 +14,13 @@ export default ({ data }) => {
         <div id = "info">{tags && tags.join(', ')}</div> 
         <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: html }} />
+        <div id="replybox"></div>
+        <script>
+          window.replybox = {
+	        site: 'qGOREJ7YMr', 
+            };
+          </script>
+          <script src="https://cdn.getreplybox.com/js/embed.js"></script>
 
       </div>
     </Layout>
