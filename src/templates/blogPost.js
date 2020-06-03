@@ -6,6 +6,8 @@ import { parseImageUrl } from 'notabase/src/utils'
 
 export default ({ data }) => {
   const { posts: { title, tags, publish_date, html, url, slug, desc, color, cover_image } } = data
+  
+
 
   return (
     <Layout>
@@ -14,7 +16,6 @@ export default ({ data }) => {
         <div id = "info">{tags && tags.join(', ')}</div> 
         <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: html }} />
-
       </div>
     </Layout>
   )
