@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { parseImageUrl } from 'notabase/src/utils'
+import HyvorTalk from 'hyvor-talk-react'
 
 
 export default ({ data }) => {
@@ -16,6 +17,7 @@ export default ({ data }) => {
         <div id = "info">{tags && tags.join(', ')}</div> 
         <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: html }} />
+        <HyvorTalk.Embed websiteId={790} />
       </div>
     </Layout>
   )
